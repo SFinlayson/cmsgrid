@@ -42,7 +42,7 @@ setup(
     url='https://github.com/cmsgrid/cmsgrid',
     packages=[
         'cmsgrid',
-        'migrations',
+        'cmsgrid.migrations',
     ],
     install_requires=INSTALL_REQUIRES,
     license='LICENSE.txt',
