@@ -2,9 +2,6 @@ from django import forms
 from .models import GridCell
 
 
-# ############################################################################
-# HTML Grid
-
 class GridForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):

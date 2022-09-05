@@ -66,4 +66,3 @@ class GridCell(CMSPlugin):
         else:
             return "GridItem"
 
-"
