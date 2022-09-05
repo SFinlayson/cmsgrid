@@ -1,0 +1,16 @@
+{% load cms_tags %}
+<!-- {{instance.label}} -->
+{% spaceless %}
+<style>.grid_{{instance.pk}} {
+    display:grid;{% if instance.template_areas %}
+      grid-template-areas:{%  autoescape off %}{{instance.template_areas}};{% endautoescape %} 
+    {% endif %}
+    {% if instance.grid_template_columns %}grid-template-columns:{{instance.grid_template_columns}};{% endif %}{% if instance.grid_template_rows %}grid-template-rows: {{instance.grid_template_rows}};{% endif %}
+}
+{% for plugin in  instance.child_plugin_instances %}.griditem-{{plugin.pk}} { {% if plugin.gridarea %}grid-area:{{plugin.gridarea}};{% endif %}}
+{% endfor %}
+
+</style>
+{% endspaceless %}
+<div class="grid_{{ instance.pk }}" {% if instance.attributes %}{{ instance.attribures_str }}{% endif %}>{% for plugin in instance.child_plugin_instances %}{% render_plugin plugin %}{% endfor %}</div>
+<!-- End {{instance.label}} -->
