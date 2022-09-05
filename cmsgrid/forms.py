@@ -1,5 +1,5 @@
 from django import forms
-from grid.models import GridItem
+from cmsgrid.models import GridItem
 
 
 class GridForm(forms.ModelForm):

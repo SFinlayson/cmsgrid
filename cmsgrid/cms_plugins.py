@@ -1,8 +1,8 @@
 from cms.plugin_base import CMSPluginBase
 from cms.plugin_pool import plugin_pool
 from cms.models.pluginmodel import CMSPlugin
-from grid.models import Grid, GridItem
-from grid.forms import GridForm
+from cmsgrid.models import Grid, GridItem
+from cmsgrid.forms import GridForm
 
 
 @plugin_pool.register_plugin
