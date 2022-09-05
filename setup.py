@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 from pathlib import Path
 
-from setuptools import setup
+from setuptools import find_packages, setup
 
 from cmsgrid import __version__
 
@@ -40,10 +40,7 @@ setup(
     author='SFinlayson',
     author_email='finlaysonsteve@gmail.com',
     url='https://github.com/cmsgrid/cmsgrid',
-    packages=[
-        'cmsgrid',
-        'cmsgrid.migrations',
-    ],
+    packages=find_packages(exclude=['project', 'project.*']),
     install_requires=INSTALL_REQUIRES,
     license='LICENSE.txt',
     platforms=['OS Independent'],
