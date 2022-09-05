@@ -1,5 +1,5 @@
 from django import forms
-from .models import GridCell
+from grid.models import GridItem
 
 
 class GridForm(forms.ModelForm):
@@ -16,6 +16,6 @@ class GridForm(forms.ModelForm):
     )
 
     class Meta:
-        model = GridCell
+        model = GridItem
         exclude = ('page', 'position', 'placeholder',
                    'language', 'plugin_type')
