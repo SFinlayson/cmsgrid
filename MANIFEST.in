@@ -1,0 +1,7 @@
+include LICENSE.txt
+include README.rst
+recursive-include cmsgrid/migrations *
+recursive-include cmsgrid/south_migrations *
+recursive-include cmsgrid/locale *
+recursive-include cmsgrid/templates *
+recursive-exclude * *.pyc

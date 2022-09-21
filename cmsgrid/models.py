@@ -1,8 +1,5 @@
 from django.db import models
 from cms.models import CMSPlugin
-from cms.models.fields import PageField
-from filer.fields.image import FilerImageField
-from django.conf import settings
 from djangocms_attributes_field.fields import AttributesField
 
 
@@ -41,9 +38,9 @@ class Grid(CMSPlugin):
             return "Grid"
 
 
-class GridCell(CMSPlugin):
+class GridItem(CMSPlugin):
     """
-    A cell for the Grids Plugin
+    Grid Item Plugin
     """
     label = models.CharField(max_length=80, blank=True, null=True)
     gridarea = models.CharField(max_length=80, blank=True, null=True)

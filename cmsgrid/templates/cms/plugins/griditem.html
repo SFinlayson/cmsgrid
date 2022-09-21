@@ -1,0 +1,2 @@
+{% load cms_tags %}<div class="griditem-{{instance.pk}}" {% if instance.attributes %}{{ instance.attributes_str }}{% endif %}>{% for plugin in instance.child_plugin_instances %}{% render_plugin plugin %}{% endfor %}</div>
+
