@@ -65,5 +65,3 @@ class GridCell(CMSPlugin):
             return self.label
         else:
             return "GridItem"
-
-"
